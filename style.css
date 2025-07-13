@@ -2,6 +2,7 @@
 
 html {
   font-family: "Ubuntu", sans-serif;
+  font-size: large;
 }
 
 body {
@@ -13,7 +14,9 @@ body {
 
 .navbar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   background-color: #ffffff;
   padding: 1.5rem 2rem;
@@ -23,16 +26,24 @@ body {
 }
 
 .site-title {
+  white-space: nowrap;
   font-size: 1.5rem;
   font-weight: 700;
   color: #0f172a;
   margin: 0;
+  padding-right: 1rem;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
   margin: 0;
   padding: 0;
 }
@@ -76,6 +87,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
   color: #1f2937;
   transition: color 0.3s ease;
 }
@@ -90,12 +102,25 @@ img {
 
 #about {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
   padding: 2rem;
   margin: 2rem;
   align-items: flex-start;
   color: #f5f7fa;
+}
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column; /* kis képernyőn egymás alatt */
+    align-items: center;
+    text-align: center;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+  }
 }
 
 .bottom-row {
@@ -126,4 +151,53 @@ img {
 .education li i {
   color: #64a3ff;
   font-size: 1.1rem;
+}
+
+#technologies {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 2rem;
+  margin: 2rem;
+  align-items: flex-start;
+  color: #f5f7fa;
+}
+
+#technologies h1 {
+}
+
+@media (max-width: 900px) {
+  .tech-category {
+    flex: 1 1 100%;
+  }
+}
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.tech-category {
+  margin-bottom: 2rem;
+  border-left: 4px solid #f5f7fa;
+  padding-left: 1rem;
+}
+
+.section {
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: -9999px;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
 }

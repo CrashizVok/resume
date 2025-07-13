@@ -75,14 +75,26 @@
     <header>
       <nav class="navbar">
         <h1 class="site-title">CrashiZ</h1>
-        <ul class="nav-links">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#technologies">Technologies</a></li>
-          <li><a href="#writeups">CTF Writeups</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-row nav-middle">
+          <ul class="nav-links">
+            <li><a href="#about" id="about-toggle-link">About Me</a></li>
+            <li>
+              <a href="#technologies" id="technologies-toggle-link"
+                >Technologies</a
+              >
+            </li>
+            <li>
+              <a href="#writeups" id="writeups-toggle-link">CTF Writeups</a>
+            </li>
+            <li>
+              <a href="#certificates" id="certificates-toggle-link"
+                >Certificates</a
+              >
+            </li>
+            <li><a href="#projects" id="projects-toggle-link">Projects</a></li>
+            <li><a href="#contact" id="contact-toggle-link">Contact</a></li>
+          </ul>
+        </div>
         <div class="dark-toggle-wrapper">
           <button id="dark-toggle" class="dark-toggle">
             <i class="fi fi-rc-moon"></i>
@@ -91,7 +103,7 @@
       </nav>
     </header>
     <main>
-      <section id="about">
+      <section id="about" class="section active">
         <div>
           <img src="assets/profile.png" alt="profile" />
         </div>
@@ -150,6 +162,56 @@
           </div>
         </div>
       </section>
+      <section id="technologies" class="section hidden">
+        <h1>Technologies</h1>
+        <div class="tech-container">
+          <div class="tech-category">
+            <h2>Operating Systems</h2>
+            <div class="tech-grid">
+              <ul>
+                <li>Kali linux</li>
+                <li>Windows 10/11</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h2>Programming languages</h2>
+            <div class="tech-grid">
+              <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C/C++</li>
+                <li>Bash</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tech-category">
+            <h2>Tools & Frameworks</h2>
+            <div class="tech-grid">
+              <ul>
+                <li>Burp Suite</li>
+                <li>Nikto</li>
+                <li>OWASP ZAP</li>
+                <li>Nmap</li>
+                <li>Metasploit</li>
+                <li>Wireshark</li>
+                <li>Hydra</li>
+                <li>Gobuster</li>
+                <li>Binary Ninja</li>
+                <li>etc...</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="writeups" class="section hidden"></section>
+      <section id="certificates" class="section hidden"></section>
+      <section id="projects" class="section hidden"></section>
+      <section id="contact" class="section hidden"></section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
