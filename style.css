@@ -233,6 +233,10 @@ img {
   text-decoration: none;
 }
 
+#contact h1 {
+  text-align: center;
+}
+
 .contact-cards {
   display: flex;
   flex-wrap: wrap;
